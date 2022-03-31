@@ -39,7 +39,7 @@ client.init("Enter App ID from console", function() {
 });
 
 // Join a channel
-// you can generate a temporary token in Agora Console.
+// You can generate a temporary token in Agora Console.
 let tempUserToken = "Enter temporarily generated token from Agora Console"
 client.join(tempUserToken, "<channel name>", null, (uid)=>{
     // Create a local stream
@@ -57,7 +57,6 @@ client.join(tempUserToken, "<channel name>", null, (uid)=>{
   }, handleError);
 
 // Subscribing to remote streams.
-
 // Subscribe to the remote stream when it is published
 client.on("stream-added", function(evt){
     client.subscribe(evt.stream, handleError);
